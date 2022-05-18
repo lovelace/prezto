@@ -11,3 +11,6 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+# when working in a command prompt, don't bring up a window for meacs
+alias emacs='emacs -nw'

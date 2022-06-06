@@ -15,3 +15,5 @@ fi
 
 # when working in a command prompt, don't bring up a window for meacs
 alias emacs='emacs -nw'
+alias ec="emacsclient -t -a ''"
+alias em="emacsclient -t -a ''"

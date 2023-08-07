@@ -51,6 +51,8 @@ typeset -gU cdpath fpath mailpath path
 # Set the list of directories that Zsh searches for programs.
 path=(
   $HOME/{,s}bin(N)
+  /opt/homebrew/opt/qt@5/bin
+  /opt/homebrew/opt/python@3.11/libexec/bin
   /opt/{homebrew,local}/opt/grep/libexec/gnubin
   /usr/local/opt/grep/libexec/gnubin
   /opt/{homebrew,local}/{,s}bin(N)

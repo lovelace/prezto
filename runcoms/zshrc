@@ -13,6 +13,12 @@ fi
 
 # Customize to your needs...
 
+# Source Perlbrew
+if [[ -s "${ZDOTDIR:-$HOME}/perl5/perlbrew/etc/bashrc" ]]; then
+  source "${ZDOTDIR:-$HOME}/perl5/perlbrew/etc/bashrc"
+fi
+
+
 # when working in a command prompt, don't bring up a window for meacs
 alias emacs='emacs -nw'
 alias ec="emacsclient -t -a ''"

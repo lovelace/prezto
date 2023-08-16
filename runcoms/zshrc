@@ -13,8 +13,33 @@ fi
 
 # Customize to your needs...
 
+# Source Perlbrew
+if [[ -s "${ZDOTDIR:-$HOME}/perl5/perlbrew/etc/bashrc" ]]; then
+  source "${ZDOTDIR:-$HOME}/perl5/perlbrew/etc/bashrc"
+fi
+
+
 # when working in a command prompt, don't bring up a window for meacs
 alias emacs='emacs -nw'
 alias ec="emacsclient -t -a ''"
 alias em="emacsclient -t -a ''"
 alias diskhog='du -sk * 2>/dev/null | sort -n | cut -f2 | while read DIR ; do du -sh "$DIR" 2>/dev/null ; done; du -sh . 2>/dev/null'
+
+export DOCKER_HOST="unix://${HOME}/.colima/default/docker.sock"
+
+[ -x $HOMEBREW_PREFIX/bin/thefuck ] && eval $(thefuck --alias)
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
+        . "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<

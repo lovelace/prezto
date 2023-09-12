@@ -24,6 +24,7 @@ alias emacs='emacs -nw'
 alias ec="emacsclient -t -a ''"
 alias em="emacsclient -t -a ''"
 alias diskhog='du -sk * 2>/dev/null | sort -n | cut -f2 | while read DIR ; do du -sh "$DIR" 2>/dev/null ; done; du -sh . 2>/dev/null'
+alias diskhog-all='du -sk $(ls -1a | grep -v "^\.\.$") 2>/dev/null | sort -n | cut -f2 | while read DIR ; do du -sh "$DIR" 2>/dev/null ; done'
 
 export DOCKER_HOST="unix://${HOME}/.colima/default/docker.sock"
 

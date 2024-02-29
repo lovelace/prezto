@@ -20,7 +20,7 @@ fi
 
 
 # when working in a command prompt, don't bring up a window for meacs
-alias emacs='emacs -nw'
+#alias emacs='emacs -nw'
 alias ec="emacsclient -t -a ''"
 alias em="emacsclient -t -a ''"
 alias diskhog='du -sk * 2>/dev/null | sort -n | cut -f2 | while read DIR ; do du -sh "$DIR" 2>/dev/null ; done; du -sh . 2>/dev/null'

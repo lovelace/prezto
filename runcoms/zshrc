@@ -13,6 +13,16 @@ fi
 
 # Customize to your needs...
 
+# Load dependencies.
+pmodload 'helper'
+
+# iTerm shell integration
+if is-darwin; then
+  if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/thirdparty/iterm2_shell_integration.zsh" ]]; then
+    source "${ZDOTDIR:-$HOME}/.zprezto/thirdparty/iterm2_shell_integration.zsh"
+  fi
+fi
+
 # Source Perlbrew
 if [[ -s "${ZDOTDIR:-$HOME}/perl5/perlbrew/etc/bashrc" ]]; then
   source "${ZDOTDIR:-$HOME}/perl5/perlbrew/etc/bashrc"

@@ -59,6 +59,7 @@ path=(
   /usr/local/{,s}bin(N)
   $HOME/.emacs.d/bin
   $HOME/.config/emacs/bin
+  $HOME/go/bin
   $path
 )
 
